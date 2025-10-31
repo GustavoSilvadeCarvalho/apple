@@ -1,16 +1,43 @@
-# React + Vite
+# Recriação — iPhone 15 Pro (Apple)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é uma recriação do site do iPhone 15 Pro da Apple, construída com foco em animações avançadas e cenas 3D. Ele combina:
 
-Currently, two official plugins are available:
+- React (Vite) para a aplicação front-end moderna e rápida
+- Tailwind CSS para estilo utilitário e responsivo
+- GSAP para animações fluídas e controladas
+- Three.js (via @react-three/fiber e @react-three/drei) para cenas 3D interativas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O objetivo é simular a experiência visual e interativa do site oficial, usando técnicas modernas de web (WebGL, animações e otimizações) — é um projeto de portfólio.
 
-## React Compiler
+## Demonstração
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Visite a versão hospedada no Vercel (https://apple-xi-virid.vercel.app/).
+- Repare nas animações de entrada, rotação do modelo 3D, e transições entre seções.
 
-## Expanding the ESLint configuration
+## Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Vite — bundler e dev server rápido
+- React 18+ — biblioteca UI
+- Tailwind CSS — utilitários CSS
+- GSAP — animações (timelines, scroll, morphs)
+- Three.js + @react-three/fiber + @react-three/drei — render 3D
+- Deploy: Vercel
+
+## Recursos e funcionalidades
+
+- Modelo 3D do aparelho integrado com Three.js (GLTF/GLB)
+- Animações orquestradas com GSAP (entrada, parallax, micro-interações)
+- Carousel de vídeos e mídia responsiva
+- Loader inicial e experiência otimizada para WebGL
+- Layout responsivo com Tailwind, otimizado para desktops e mobile
+- Pré-carregamento de texturas/meshes e gestão básica de performance
+
+## Estrutura do projeto (resumo)
+
+- `src/` — código fonte React
+  - `components/` — componentes (Hero, Navbar, ModelView, Loader, etc.)
+  - `constants/`, `utils/` — valores e helpers
+  - `App.jsx`, `main.jsx`, `index.css` — entrada da aplicação
+- `models/` — modelos 3D e assets relacionados
+- `public/assets/` — imagens, vídeos
+- `vite.config.js`, `tailwind.config.js`, `postcss.config.js` — configs
